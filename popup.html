@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Focus Mode Detector — track your browsing habits and stay productive.">
+  <title>Focus Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Focus Mode</h1>
+
+    <!-- Toggle card -->
+    <div class="glass-card">
+      <span class="status-text" id="statusText">OFF</span>
+      <label class="switch" aria-label="Toggle focus mode">
+        <input type="checkbox" id="focusToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- Summary stats -->
+    <div class="stats-container">
+      <p class="focus-score-text">Focus Score: <strong id="focusScore">100</strong>/100</p>
+      <p class="stats-text" style="margin-top: 8px;">
+        You avoided distraction <strong id="dailyCount">0</strong> times today
+      </p>
+    </div>
+
+    <!-- Per-site time breakdown -->
+    <div class="sites-container">
+      <h3>Time Spent Today</h3>
+      <div id="sitesList" class="sites-list"></div>
+      <a href="dashboard.html" target="_blank" class="dashboard-link">View Full Dashboard &rarr;</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

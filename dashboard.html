@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Focus Mode Detector — your full weekly productivity dashboard.">
+  <title>Focus Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <header class="header">
+      <h1>Focus Dashboard</h1>
+      <div class="score-card">
+        <span class="score-label">Today's Focus Score</span>
+        <span class="score-value" id="dashFocusScore">100</span>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- Per-site time breakdown -->
+      <section class="card sites-card">
+        <h2>Time Spent Today</h2>
+        <div class="sites-list" id="dashSitesList">
+          <!-- Populated by dashboard.js -->
+        </div>
+      </section>
+
+      <!-- Weekly activity bar chart -->
+      <section class="card chart-card">
+        <h2>Weekly Activity</h2>
+        <div class="chart-container">
+          <div class="chart" id="dashChart">
+            <!-- Bars populated by dashboard.js -->
+          </div>
+          <div class="chart-labels" id="dashChartLabels">
+            <!-- Labels populated by dashboard.js -->
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
